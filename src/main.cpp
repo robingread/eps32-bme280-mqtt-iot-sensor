@@ -32,6 +32,8 @@ void connectWiFi()
     delay(1000);
   }
   Serial.println("\nWiFi connected!");
+  Serial.printf("IP Address: %s \n", WiFi.localIP());
+  Serial.printf("Hostname: %s \n", WiFi.getHostname());
 }
 
 void connectMQTT()
