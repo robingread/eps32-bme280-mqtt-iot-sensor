@@ -23,6 +23,8 @@ void connectWiFi()
   Serial.printf("SSID: %s \n", WIFI_SSID);
   Serial.printf("Password: %s \n", WIFI_PASSWORD);
 
+  WiFi.setHostname(DEVICE_ID);
+  WiFi.mode(WIFI_STA);
   WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
   while (WiFi.status() != WL_CONNECTED)
   {
